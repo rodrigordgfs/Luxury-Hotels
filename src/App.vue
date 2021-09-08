@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header-app />
-    <router-view/>
+    <header-app class="header-app" />
+    <router-view class="router-view" />
   </div>
 </template>
 
@@ -18,5 +18,13 @@ export default {
 </script>
 
 <style lang="scss">
+.header-app {
+  position: absolute;
+  z-index: 2;
+}
 
+.router-view {
+  position: absolute;
+  z-index: 1;
+}
 </style>
