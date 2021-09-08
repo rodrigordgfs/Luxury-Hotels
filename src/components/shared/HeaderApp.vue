@@ -165,7 +165,7 @@ export default {
           position: absolute;
           width: 100%;
           height: 0;
-          top: 155px;
+          top: 130px;
           right: 0;
           background: #14274a;
           z-index: 1000;
@@ -194,7 +194,7 @@ export default {
         }
       }
       #header__menu.active .header__menu_items {
-        height: calc(100vh - 155px);
+        height: calc(100vh - 130px);
         visibility: visible;
         overflow-y: auto;
       }

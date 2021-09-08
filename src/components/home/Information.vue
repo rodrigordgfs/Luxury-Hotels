@@ -45,17 +45,18 @@ export default {
         color: #ffffff;
         &:nth-child(1) {
           font-family: "Montserrat", sans-serif;
-          font-size: 32px;
+          font-size: 2rem;
           text-transform: uppercase;
         }
         &:nth-child(2) {
           font-family: "Cormorant Garamond", sans-serif;
-          font-size: 100px;
+          font-size: 6.25rem;
           text-transform: uppercase;
+          line-height: 80px;
         }
         &:nth-child(3) {
           font-family: "Cormorant Garamond", sans-serif;
-          font-size: 50px;
+          font-size: 3.125rem;
           text-transform: uppercase;
           letter-spacing: 3px;
           padding: -5px;
@@ -63,7 +64,7 @@ export default {
         &:nth-child(4),
         &:nth-child(5) {
           font-family: "Montserrat", sans-serif;
-          font-size: 20px;
+          font-size: 1.25rem;
         }
       }
     }
