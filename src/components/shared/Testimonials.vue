@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import ScrollReveal from "scrollreveal";
+
 export default {
   name: "Testimonials",
 
@@ -54,6 +56,7 @@ export default {
   },
 
   mounted() {
+    this.scrollReveal();
     this.testimonial = this.testimonials[0];
   },
 
@@ -88,6 +91,33 @@ export default {
           this.testimonials.indexOf(this.testimonial) - 1
         ];
       }
+    },
+
+    scrollReveal() {
+      let options = {
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      };
+      ScrollReveal({
+        ...options,
+        origin: "top",
+      }).reveal(".testimonials__title", { delay: 200 });
+
+      ScrollReveal({
+        ...options,
+        origin: "right",
+      }).reveal(".testimonials__quote", { delay: 250 });
+
+      ScrollReveal({
+        ...options,
+        origin: "left",
+      }).reveal(".testimonials__author", { delay: 300 });
+
+      ScrollReveal({
+        ...options,
+        origin: "bottom",
+      }).reveal(".testimonials__buttons", { delay: 350 });
     },
   },
 };
