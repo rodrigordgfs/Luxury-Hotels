@@ -52,7 +52,7 @@ export default {
 .info {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/images/home.png");
+  background-image: url("https://i.imgur.com/jIJvKJz.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
