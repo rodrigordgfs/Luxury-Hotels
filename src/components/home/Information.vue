@@ -32,6 +32,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   .container {
     max-width: 1100px;
     padding: 0 10px;
