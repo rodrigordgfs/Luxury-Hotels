@@ -2,12 +2,14 @@
   <div class="home">
     <information />
     <amenities />
+    <footer-app />
   </div>
 </template>
 
 <script>
 import Information from "@/components/home/Information";
 import Amenities from "@/components/home/Amenities";
+import FooterApp from "@/components/shared/FooterApp";
 
 export default {
   name: "Home",
@@ -15,6 +17,7 @@ export default {
   components: {
     Information,
     Amenities,
+    FooterApp,
   },
 };
 </script>
