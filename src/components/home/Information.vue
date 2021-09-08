@@ -19,8 +19,32 @@
 </template>
 
 <script>
+import ScrollReveal from "scrollreveal";
+
 export default {
   name: "Information",
+
+  mounted() {
+    this.scrollReveal();
+  },
+
+  methods: {
+    scrollReveal() {
+      ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".info__text", { delay: 200 });
+
+      ScrollReveal({
+        origin: "bottom",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".info__book_now", { delay: 200 });
+    },
+  },
 };
 </script>
 

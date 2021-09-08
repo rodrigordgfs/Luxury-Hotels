@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import ScrollReveal from "scrollreveal";
 import AmenitieCard from "./AmenitiesCard";
 
 export default {
@@ -41,6 +42,21 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    this.scrollReveal();
+  },
+
+  methods: {
+    scrollReveal() {
+      ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".amenities__title", { delay: 200 });
+    },
+  },
 };
 </script>
 
@@ -62,10 +78,10 @@ export default {
 }
 
 @media only screen and (max-width: 700px) {
-    .amenities {
-        .amenities__title {
-            margin-top: 70px;
-        }
+  .amenities {
+    .amenities__title {
+      margin-top: 70px;
     }
+  }
 }
 </style>

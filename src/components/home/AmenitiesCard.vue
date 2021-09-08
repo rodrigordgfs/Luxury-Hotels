@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import ScrollReveal from "scrollreveal";
+
 export default {
   name: "AmenitiesCard",
 
@@ -24,6 +26,31 @@ export default {
     amenitie: {
       type: Object,
       required: true,
+    },
+  },
+
+  mounted() {
+    this.scrollReveal();
+  },
+
+  methods: {
+    scrollReveal() {
+      const sr = ScrollReveal({
+        origin: "left",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+      sr.reveal(".amenitie_card__info__title", { delay: 200 });
+      sr.reveal(".amenitie_card__info__description", { delay: 250 });
+      sr.reveal(".amenitie_card__info__action", { delay: 200 });
+
+      ScrollReveal({
+        origin: "right",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".amenitie_card__image", { delay: 250 });
     },
   },
 };
@@ -93,9 +120,9 @@ export default {
       }
     }
     .amenitie_card__image {
-        flex: none;
-        height: 300px;
-      }
+      flex: none;
+      height: 300px;
+    }
   }
 }
 </style>
