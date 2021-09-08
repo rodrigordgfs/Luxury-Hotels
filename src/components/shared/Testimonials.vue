@@ -99,6 +99,7 @@ export default {
         duration: 2000,
         reset: true,
       };
+
       ScrollReveal({
         ...options,
         origin: "top",

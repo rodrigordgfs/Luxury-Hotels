@@ -30,18 +30,20 @@ export default {
 
   methods: {
     scrollReveal() {
-      ScrollReveal({
-        origin: "top",
+      let options = {
         distance: "50px",
         duration: 2000,
         reset: true,
+      };
+
+      ScrollReveal({
+        ...options,
+        origin: "top",
       }).reveal(".info__text", { delay: 200 });
 
       ScrollReveal({
+        ...options,
         origin: "bottom",
-        distance: "50px",
-        duration: 2000,
-        reset: true,
       }).reveal(".info__book_now", { delay: 200 });
     },
   },

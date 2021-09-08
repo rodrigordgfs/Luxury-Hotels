@@ -35,21 +35,23 @@ export default {
 
   methods: {
     scrollReveal() {
-      const sr = ScrollReveal({
-        origin: "left",
+      let options = {
         distance: "50px",
         duration: 2000,
         reset: true,
+      };
+
+      const sr = ScrollReveal({
+        ...options,
+        origin: "left",
       });
       sr.reveal(".amenitie_card__info__title", { delay: 200 });
       sr.reveal(".amenitie_card__info__description", { delay: 250 });
       sr.reveal(".amenitie_card__info__action", { delay: 200 });
 
       ScrollReveal({
+        ...options,
         origin: "bottom",
-        distance: "50px",
-        duration: 2000,
-        reset: true,
       }).reveal(".amenitie_card__image", { delay: 250 });
     },
   },
