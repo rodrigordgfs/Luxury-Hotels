@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <information cover="https://i.imgur.com/jIJvKJz.png" />
+    <information :cover="cover" />
     <amenities />
     <testimonials />
     <footer-app />
@@ -21,6 +21,36 @@ export default {
     Amenities,
     Testimonials,
     FooterApp,
+  },
+
+  data() {
+    return {
+      cover: "https://i.imgur.com/jIJvKJz.png",
+    };
+  },
+
+  metaInfo: {
+    title: "Luxury Hotels - Home",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Book your stay and enjoy Luxury redefined at the most affordable rates.",
+      },
+      {
+        property: "og:title",
+        content: "Luxury Hotels - Home",
+      },
+      { property: "og:site_name", content: "Luxury Hotels" },
+      {
+        property: "og:description",
+        content:
+          "Book your stay and enjoy Luxury redefined at the most affordable rates.",
+      },
+      { property: "og:type", content: "hotel" },
+      { property: "og:url", content: window.location.href },
+      { property: "og:image", content: "https://i.imgur.com/jIJvKJz.png" },
+    ],
   },
 };
 </script>
