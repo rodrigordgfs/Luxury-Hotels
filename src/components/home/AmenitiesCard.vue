@@ -46,7 +46,7 @@ export default {
       sr.reveal(".amenitie_card__info__action", { delay: 200 });
 
       ScrollReveal({
-        origin: "right",
+        origin: "bottom",
         distance: "50px",
         duration: 2000,
         reset: true,
