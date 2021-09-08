@@ -57,7 +57,7 @@
           <form>
             <input
               class="footer__newsletter__input"
-              type="text"
+              type="email"
               placeholder="Enter your email"
             />
             <input
