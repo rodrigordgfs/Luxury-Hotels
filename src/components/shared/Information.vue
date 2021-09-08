@@ -1,5 +1,8 @@
 <template>
-  <section class="info">
+  <section
+    class="info"
+    :style="{ backgroundImage: 'url(' + cover + ')' }"
+  >
     <div class="container">
       <div class="info__text">
         <p>Welcome to</p>
@@ -23,6 +26,13 @@ import ScrollReveal from "scrollreveal";
 
 export default {
   name: "Information",
+
+  props: {
+    cover: {
+      type: String,
+      required: true
+    }
+  },
 
   mounted() {
     this.scrollReveal();
@@ -54,7 +64,6 @@ export default {
 .info {
   width: 100%;
   height: 100vh;
-  background-image: url("https://i.imgur.com/jIJvKJz.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <information />
+    <information cover="https://i.imgur.com/jIJvKJz.png" />
     <amenities />
     <testimonials />
     <footer-app />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Information from "@/components/home/Information";
+import Information from "@/components/shared/Information";
 import Amenities from "@/components/home/Amenities";
 import FooterApp from "@/components/shared/FooterApp";
 import Testimonials from "@/components/shared/Testimonials";

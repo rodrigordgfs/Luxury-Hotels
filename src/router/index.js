@@ -12,12 +12,12 @@ const routes = [
   {
     path: "/facilities",
     name: "Facilities",
-    // component: () => import("../views/facilities"),
+    component: () => import("../views/facilities"),
   },
   {
     path: "/rooms",
     name: "Rooms",
-    // component: () => import("../views/rooms"),
+    component: () => import("../views/rooms"),
   },
   {
     path: "/contact",
