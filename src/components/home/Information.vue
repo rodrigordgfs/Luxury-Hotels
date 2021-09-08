@@ -10,7 +10,7 @@
       </div>
       <div class="info__book_now">
         <a href="#">
-          <img src="/img/icons/book.svg" alt="Icon Book Now" />
+          <img src="../../assets/icons/book.svg" alt="Icon Book Now" />
           <p>Book Now</p>
         </a>
       </div>
@@ -28,7 +28,7 @@ export default {
 .info {
   width: 100%;
   height: 100vh;
-  background-image: url("/img/images/home.png");
+  background-image: url("../../assets/images/home.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
