@@ -1,17 +1,20 @@
 <template>
   <div class="facilities">
     <information :cover="cover" />
+    <benefits />
   </div>
 </template>
 
 <script>
 import Information from "@/components/shared/Information";
+import Benefits from "@/components/facilities/Benefits";
 
 export default {
   name: "Facilities",
 
   components: {
     Information,
+    Benefits,
   },
 
   data() {
