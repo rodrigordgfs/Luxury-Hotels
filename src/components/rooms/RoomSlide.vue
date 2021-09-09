@@ -1,8 +1,15 @@
 <template>
-  <div class="room_slide" :style="{ height: height }">
+  <div
+    class="room_slide"
+    :style="{
+      height: height,
+    }"
+  >
     <div
       class="room_slide__image"
-      :style="{ backgroundImage: 'url(' + image + ')' }"
+      :style="{
+        backgroundImage: 'url(' + image + ')',
+      }"
     />
     <div class="room_slide__buttons">
       <span
@@ -34,7 +41,7 @@ export default {
     },
     height: {
       type: String,
-      default: window.innerWidth < 965 ? "250px" : "450px",
+      default: window.innerWidth > 965 ? "250px" : "450px",
     },
   },
 

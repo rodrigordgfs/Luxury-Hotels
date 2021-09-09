@@ -71,6 +71,7 @@ export default {
       font-weight: 700;
       font-size: 36px;
       color: #14274a;
+      text-transform: uppercase;
     }
   }
 }

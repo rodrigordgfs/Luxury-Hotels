@@ -5,7 +5,7 @@
       <h2>{{ room.title }}</h2>
     </div>
     <div class="rooms_card__options">
-      <div class="rooms_card__options__details">
+      <div class="rooms_card__options__details" @click="openRoomDetails">
         <div class="rooms_card__options__details_icon">
           <img src="../../assets/icons/plus.svg" alt="Plus Icon" />
         </div>
@@ -20,6 +20,7 @@
 
 <script>
 import RoomSlide from "./RoomSlide.vue";
+import RoomDetailModal from "./RoomDetailModal.vue";
 
 export default {
   name: "RoomsCard",
@@ -32,6 +33,16 @@ export default {
     room: {
       type: Object,
       required: true,
+    },
+  },
+
+  methods: {
+    openRoomDetails() {
+      this.$modal.open(RoomDetailModal, {
+        props: {
+          room: this.room,
+        },
+      });
     },
   },
 };
