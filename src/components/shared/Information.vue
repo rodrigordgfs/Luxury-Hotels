@@ -9,7 +9,7 @@
         <p>redefined at the most affordable rates.</p>
       </div>
       <div class="info__book_now">
-        <a href="#">
+        <a @click="bookNow">
           <img src="../../assets/icons/book.svg" alt="Icon Book Now" />
           <p>Book Now</p>
         </a>
@@ -36,6 +36,10 @@ export default {
   },
 
   methods: {
+    bookNow() {
+      this.$router.push({ name: "Rooms" });
+    },
+
     scrollReveal() {
       let options = {
         distance: "50px",
@@ -114,6 +118,7 @@ export default {
         border-radius: 10px;
         gap: 10px;
         margin: 0 auto;
+        cursor: pointer;
         img {
           width: 20px;
           height: 20px;

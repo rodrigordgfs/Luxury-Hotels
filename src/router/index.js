@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -22,13 +22,12 @@ const routes = [
   {
     path: "/contact",
     name: "Contact-us",
-    hidden: true,
-    // component: () => import("../views/contact"),
-  }
+    component: () => import("../views/contact"),
+  },
 ];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
