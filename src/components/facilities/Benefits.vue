@@ -104,7 +104,7 @@ export default {
   .benefits__title {
     padding-top: 50px;
     font-family: "Cormorant Garamond", sans-serif;
-    color: #14274a;
+    color: #9fa8b8;
     font-size: 42px;
     text-transform: uppercase;
     text-align: center;

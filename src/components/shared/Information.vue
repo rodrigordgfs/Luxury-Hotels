@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="info"
-    :style="{ backgroundImage: 'url(' + cover + ')' }"
-  >
+  <section class="info" :style="{ backgroundImage: 'url(' + cover + ')' }">
     <div class="container">
       <div class="info__text">
         <p>Welcome to</p>
@@ -30,8 +27,8 @@ export default {
   props: {
     cover: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   mounted() {
@@ -81,18 +78,18 @@ export default {
         color: #ffffff;
         &:nth-child(1) {
           font-family: "Montserrat", sans-serif;
-          font-size: 2rem;
+          font-size: 2.625rem;
           text-transform: uppercase;
         }
         &:nth-child(2) {
           font-family: "Cormorant Garamond", sans-serif;
-          font-size: 6.25rem;
+          font-size: 6.875rem;
           text-transform: uppercase;
           line-height: 80px;
         }
         &:nth-child(3) {
           font-family: "Cormorant Garamond", sans-serif;
-          font-size: 3.125rem;
+          font-size: 3.75rem;
           text-transform: uppercase;
           letter-spacing: 3px;
           padding: -5px;
@@ -100,7 +97,7 @@ export default {
         &:nth-child(4),
         &:nth-child(5) {
           font-family: "Montserrat", sans-serif;
-          font-size: 1.25rem;
+          font-size: 1.875rem;
         }
       }
     }
@@ -139,6 +136,19 @@ export default {
       .info__text {
         p {
           text-align: center;
+          &:nth-child(1) {
+            font-size: 2rem;
+          }
+          &:nth-child(2) {
+            font-size: 5rem;
+          }
+          &:nth-child(3) {
+            font-size: 3.125rem;
+          }
+          &:nth-child(4),
+          &:nth-child(5) {
+            font-size: 1.25rem;
+          }
         }
       }
     }

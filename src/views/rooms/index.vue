@@ -1,17 +1,20 @@
 <template>
   <div class="rooms">
     <information :cover="cover" />
+    <rooms-rates />
   </div>
 </template>
 
 <script>
 import Information from "@/components/shared/Information";
+import RoomsRates from "@/components/rooms/RoomsRates";
 
 export default {
   name: "Rooms",
 
   components: {
     Information,
+    RoomsRates,
   },
 
   data() {
