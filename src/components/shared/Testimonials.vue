@@ -132,8 +132,8 @@ export default {
   display: flex;
   flex-direction: column;
   .testimonials__title {
-    font-family: "Cormorant Garamond", sans-serif;
-    color: #14274a;
+    font-family: $garamond;
+    color: $blueZodiac;
     font-size: 42px;
     font-weight: 700;
     text-align: center;
@@ -141,7 +141,7 @@ export default {
   .testimonials__content {
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: $montserrat;
     .testimonials__quote {
       text-align: center;
       p {
@@ -160,7 +160,7 @@ export default {
     gap: 15px;
     .testimonials__button__previous,
     .testimonials__button__next {
-      background: #e0b973;
+      background: $harvestGold;
       border: none;
       padding: 10px 15px;
       border-radius: 5px;
@@ -173,7 +173,7 @@ export default {
 }
 
 .button_disabled {
-  background: #dac090 !important;
+  background: $brandy !important;
   cursor: not-allowed !important;
 }
 </style>

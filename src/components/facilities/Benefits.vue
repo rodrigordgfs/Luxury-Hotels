@@ -103,15 +103,15 @@ export default {
   padding: 0 10px;
   .benefits__title {
     padding-top: 50px;
-    font-family: "Cormorant Garamond", sans-serif;
-    color: #9fa8b8;
+    font-family: $garamond;
+    color: $blueZodiac;
     font-size: 42px;
     text-transform: uppercase;
     text-align: center;
   }
   .benefits__description {
-    font-family: "Montserrat", sans-serif;
-    color: #14274a;
+    font-family: $montserrat;
+    color: $blueZodiac;
     font-weight: 500;
     font-size: 16px;
     text-align: center;

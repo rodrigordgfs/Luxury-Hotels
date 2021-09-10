@@ -28,7 +28,7 @@
       </ul>
     </div>
     <div class="room_slide_facilities_book_now">
-      <a href="#">
+      <a @click="closeModal">
         <img src="../../assets/icons/book.svg" alt="Icon Book Now" />
         <p>Book Now</p>
       </a>
@@ -91,9 +91,9 @@ export default {
   flex-direction: column;
   width: 500px;
   height: auto;
-  background-color: #fff;
+  background-color: $white;
   overflow: auto;
-  box-shadow: 0 8px 100px -4px rgb(0, 0, 0);
+  box-shadow: 0 8px 100px -4px $black;
   .room_slide_modal {
     .room_slide_close {
       cursor: pointer;
@@ -103,11 +103,11 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #a08044;
-      border-radius: 50%;
+      background: $coffee;
+      border-radius: 5px;
       transition: 0.5s cubic-bezier(0.06, 0.29, 0.19, 1.4);
       &:hover {
-        background: #e0b973;
+        background: $harvestGold;
       }
       img {
         width: 30px;
@@ -123,8 +123,8 @@ export default {
     padding: 20px;
     .room_slide_head_title {
       h2 {
-        font-family: "Montserrat", sans-serif;
-        color: #14274a;
+        font-family: $montserrat;
+        color: $blueZodiac;
         font-size: 1.75rem;
         text-transform: uppercase;
         font-weight: 700;
@@ -132,9 +132,9 @@ export default {
     }
     .room_slide_head_price {
       p {
-        font-family: "Montserrat", sans-serif;
-        color: #ffffff;
-        background: #e0b973;
+        font-family: $montserrat;
+        color: $white;
+        background: $harvestGold;
         border-radius: 5px;
         padding: 5px 10px;
         font-weight: 500;
@@ -144,15 +144,15 @@ export default {
   .room_slide_description {
     padding: 0 20px 20px;
     p {
-      font-family: "Montserrat", sans-serif;
+      font-family: $montserrat;
       line-height: 20px;
     }
   }
   .room_slide_facilities_title {
     padding: 20px 20px 20px;
     h2 {
-      font-family: "Montserrat", sans-serif;
-      color: #14274a;
+      font-family: $montserrat;
+      color: $blueZodiac;
       font-size: 20px;
       text-transform: uppercase;
       font-weight: 700;
@@ -165,7 +165,7 @@ export default {
       flex-direction: column;
       gap: 10px;
       li {
-        font-family: "Montserrat", sans-serif;
+        font-family: $montserrat;
         text-align: center;
         font-weight: 500;
       }
@@ -179,7 +179,7 @@ export default {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background: #e0b973;
+      background: $harvestGold;
       padding: 10px 20px;
       border-radius: 10px;
       gap: 10px;
@@ -190,11 +190,11 @@ export default {
         height: 20px;
       }
       p {
-        font-family: "Montserrat", sans-serif;
+        font-family: $montserrat;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
-        color: #ffffff;
+        color: $white;
       }
     }
   }

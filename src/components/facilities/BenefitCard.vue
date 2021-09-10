@@ -55,7 +55,7 @@ export default {
   }
   .benefit-card__content {
     position: absolute;
-    background: #ffffff;
+    background: $white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -67,10 +67,10 @@ export default {
     max-width: 350px;
     h2 {
       padding: 10px 0;
-      font-family: "Montserrat", sans-serif;
+      font-family: $montserrat;
       font-weight: 700;
       font-size: 36px;
-      color: #14274a;
+      color: $blueZodiac;
       text-transform: uppercase;
     }
   }

@@ -79,20 +79,20 @@ export default {
     justify-content: center;
     .info__text {
       p {
-        color: #ffffff;
+        color: $white;
         &:nth-child(1) {
-          font-family: "Montserrat", sans-serif;
+          font-family: $montserrat;
           font-size: 2.625rem;
           text-transform: uppercase;
         }
         &:nth-child(2) {
-          font-family: "Cormorant Garamond", sans-serif;
+          font-family: $garamond;
           font-size: 6.875rem;
           text-transform: uppercase;
           line-height: 80px;
         }
         &:nth-child(3) {
-          font-family: "Cormorant Garamond", sans-serif;
+          font-family: $garamond;
           font-size: 3.75rem;
           text-transform: uppercase;
           letter-spacing: 3px;
@@ -100,7 +100,7 @@ export default {
         }
         &:nth-child(4),
         &:nth-child(5) {
-          font-family: "Montserrat", sans-serif;
+          font-family: $montserrat;
           font-size: 1.875rem;
         }
       }
@@ -113,7 +113,7 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background: #e0b973;
+        background: $harvestGold;
         padding: 10px 20px;
         border-radius: 10px;
         gap: 10px;
@@ -124,11 +124,11 @@ export default {
           height: 20px;
         }
         p {
-          font-family: "Montserrat", sans-serif;
+          font-family: $montserrat;
           font-size: 16px;
           font-weight: 700;
           text-transform: uppercase;
-          color: #ffffff;
+          color: $white;
         }
       }
     }

@@ -82,7 +82,7 @@ export default {
 .triangle {
   margin-top: 50px;
   .container {
-    background: #14274a;
+    background: $blueZodiac;
     .footer {
       max-width: 1100px;
       margin: 0 auto;
@@ -95,9 +95,9 @@ export default {
       .footer__info {
         display: flex;
         flex-direction: column;
-        color: #ffffff;
+        color: $white;
         .footer__info__brand {
-          font-family: "Cormorant Garamond", sans-serif;
+          font-family: $garamond;
           p {
             &:nth-child(1) {
               font-size: 24px;
@@ -111,8 +111,11 @@ export default {
         .footer__info__address {
           margin-top: 10px;
           ul {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
             li {
-              font-family: "Montserrat", sans-serif;
+              font-family: $montserrat;
             }
           }
         }
@@ -122,10 +125,10 @@ export default {
           li {
             display: flex;
             flex-direction: column;
-            font-family: "Montserrat", sans-serif;
+            font-family: $montserrat;
             gap: 15px;
             a {
-              color: #ffffff;
+              color: $white;
               font-weight: 500;
             }
           }
@@ -148,8 +151,8 @@ export default {
                 width: 25px;
               }
               p {
-                font-family: "Montserrat", sans-serif;
-                color: #ffffff;
+                font-family: $montserrat;
+                color: $white;
                 font-weight: 500;
               }
             }
@@ -161,28 +164,28 @@ export default {
         flex-direction: column;
         gap: 15px;
         p {
-          font-family: "Montserrat", sans-serif;
-          color: #ffffff;
+          font-family: $montserrat;
+          color: $white;
           font-weight: 500;
         }
         form {
-          font-family: "Montserrat", sans-serif;
+          font-family: $montserrat;
           .footer__newsletter__input {
-            background: #14274a;
-            border: 3px solid #e0b973;
+            background: $blueZodiac;
+            border: 3px solid $harvestGold;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             border-right: none;
-            color: #ffffff;
+            color: $white;
             font-weight: 500;
             padding: 10px 20px;
             &::placeholder {
-              color: #ffffff;
+              color: $white;
             }
           }
           .footer__newsletter__button {
-            background: #e0b973;
-            color: #14274a;
+            background: $harvestGold;
+            color: $blueZodiac;
             text-transform: uppercase;
             padding: 13px 15px;
             border: none;
@@ -203,7 +206,7 @@ export default {
     margin: 0 auto;
     border-style: solid;
     border-width: 0 50px 50px 50px;
-    border-color: transparent transparent #14274a transparent;
+    border-color: transparent transparent $blueZodiac transparent;
   }
 }
 

@@ -19,7 +19,11 @@
         </button>
         <ul class="header__menu_items" role="menu" @click="toogleItemMenu">
           <li v-for="route in routes" :key="route.name">
-            <router-link class="header__menu_items_link" :to="route.path">
+            <router-link
+              :class="currentRouteName === route.name ? 'menu__active' : ''"
+              class="header__menu_items_link"
+              :to="route.path"
+            >
               {{ route.name }}
             </router-link>
           </li>
@@ -84,10 +88,10 @@ export default {
     .header__brand {
       display: flex;
       flex-direction: column;
-      background: #e0b973;
+      background: $harvestGold;
       padding: 30px 40px;
-      font-family: "Cormorant Garamond", sans-serif;
-      color: #14274a;
+      font-family: $garamond;
+      color: $blueZodiac;
       font-weight: 700;
       align-items: center;
       border-bottom-left-radius: 50px;
@@ -115,11 +119,12 @@ export default {
           .header__menu_items_link {
             display: block;
             font-size: 16px;
-            font-family: "Montserrat", sans-serif;
-            color: #ffffff;
+            font-family: $montserrat;
+            text-transform: uppercase;
+            color: $white;
             transition: 0.5s cubic-bezier(0.06, 0.29, 0.19, 1.4);
             &:hover {
-              color: #bdbdbd;
+              color: $cottonSeed;
             }
           }
         }
@@ -132,14 +137,30 @@ export default {
   display: none;
 }
 
+.menu__active {
+  font-weight: 700;
+  &::after {
+    content: "";
+    width: inherit;
+    height: 2px;
+    /* margin: 5px 0; */
+    background-color: $white;
+    display: block;
+    text-align: center;
+  }
+  &:hover::after {
+    background-color: $cottonSeed;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .header {
     header {
       #header__menu {
         button {
-          color: #ffffff;
+          color: $white;
           font-weight: bold;
-          font-family: "Montserrat", sans-serif;
+          font-family: $montserrat;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           font-size: 14px;
@@ -152,7 +173,7 @@ export default {
               content: "";
               width: 20px;
               height: 2px;
-              background: #ffffff;
+              background: $white;
               display: block;
               margin-top: 5px;
               transition: 0.3s cubic-bezier(0.06, 0.29, 0.19, 1.4);
@@ -167,7 +188,7 @@ export default {
           height: 0;
           top: 130px;
           right: 0;
-          background: #14274a;
+          background: $blueZodiac;
           z-index: 1000;
           transition: 0.5s cubic-bezier(0.06, 0.29, 0.19, 1.4);
           visibility: hidden;
@@ -175,7 +196,7 @@ export default {
           li {
             display: block;
             .header__menu_items_link {
-              color: #ffffff;
+              color: $white;
               padding: 1rem;
               margin: 0 1rem;
               text-align: center;
@@ -208,6 +229,12 @@ export default {
         transform: rotate(-135deg);
         top: -7px;
       }
+    }
+  }
+
+  .menu__active {
+    &::after {
+      display: none;
     }
   }
 }

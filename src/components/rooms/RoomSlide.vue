@@ -41,7 +41,7 @@ export default {
     },
     height: {
       type: String,
-      default: window.innerWidth > 965 ? "250px" : "450px",
+      default: window.innerWidth < 965 ? "250px" : "450px",
     },
   },
 
@@ -105,7 +105,7 @@ export default {
     gap: 20px;
     .room_slide__buttons__previous,
     .room_slide__buttons__next {
-      background: #e0b973;
+      background: $harvestGold;
       border: none;
       padding: 10px 15px;
       border-radius: 5px;
@@ -118,7 +118,7 @@ export default {
 }
 
 .button_disabled {
-  background: #dac090 !important;
+  background: $brandy !important;
   cursor: not-allowed !important;
 }
 </style>

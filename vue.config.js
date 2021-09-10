@@ -13,5 +13,15 @@ module.exports = {
     pwa: {
       name: 'Luxury Hotels',
       themeColor: '#F5F5F5'
+    },
+
+    css: {
+        loaderOptions: {
+            sass: {
+                prependData: `
+                    @import "@/assets/styles/_variables.scss";
+                `
+            }
+        }
     }
 }

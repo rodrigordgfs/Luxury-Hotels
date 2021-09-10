@@ -169,15 +169,15 @@ export default {
   padding: 0 10px;
   .rooms_rates__title {
     padding-top: 50px;
-    font-family: "Cormorant Garamond", sans-serif;
-    color: #14274a;
+    font-family: $garamond;
+    color: $blueZodiac;
     font-size: 42px;
     text-transform: uppercase;
     text-align: center;
   }
   .rooms_rates__description {
-    font-family: "Montserrat", sans-serif;
-    color: #14274a;
+    font-family: $montserrat;
+    color: $blueZodiac;
     font-weight: 500;
     font-size: 16px;
     text-align: center;

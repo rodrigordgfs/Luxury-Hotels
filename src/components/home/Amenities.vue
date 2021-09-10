@@ -67,8 +67,8 @@ export default {
   display: flex;
   flex-direction: column;
   .amenities__title {
-    color: #14274a;
-    font-family: "Montserrat", sans-serif;
+    color: $blueZodiac;
+    font-family: $montserrat;
     font-size: 20px;
     font-weight: 500;
     text-align: center;

@@ -31,7 +31,7 @@
         <textarea rows="5" name="message"></textarea>
       </div>
       <div class="contact_form_button">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" @click.prevent="sendEmail" />
       </div>
     </form>
   </section>
@@ -48,6 +48,10 @@ export default {
   },
 
   methods: {
+    sendEmail() {
+
+    },
+
     scrollReveal() {
       let options = {
         distance: "50px",
@@ -83,20 +87,20 @@ export default {
     gap: 20px;
     max-width: 350px;
     width: 100%;
-    .contact_information_items {
+    &_items {
       ul {
         display: flex;
         flex-direction: column;
         gap: 5px;
         li {
-          font-family: "Montserrat", sans-serif;
-          color: #14274a;
+          font-family: $montserrat;
+          color: $blueZodiac;
           font-size: 18px;
           font-weight: 500;
         }
       }
     }
-    .contact_information_map {
+    &_map {
       iframe {
         width: 100%;
         height: 300px;
@@ -114,31 +118,32 @@ export default {
       display: flex;
       flex-direction: column;
       label {
-        font-family: "Montserrat", sans-serif;
+        font-family: $montserrat;
         font-size: 14px;
-        color: #14274a;
+        color: $blueZodiac;
         font-weight: 500;
         margin: 10px 0 5px;
       }
       input,
       textarea {
-        font-family: "Montserrat", sans-serif;
+        font-family: $montserrat;
         font-weight: 500;
-        border: 1px solid #14274a;
+        border: 1px solid $blueZodiac;
         padding: 10px 15px;
       }
     }
     .contact_form_button {
       input {
-        color: #ffffff;
-        font-family: "Montserrat", sans-serif;
+        color: $white;
+        font-family: $montserrat;
         font-weight: 700;
         border: none;
-        background: #e0b973;
+        background: $harvestGold;
         padding: 10px 20px;
         border-radius: 5px;
         margin-top: 15px;
         float: right;
+        cursor: pointer;
       }
     }
   }

@@ -4,7 +4,7 @@
       <h2 class="amenitie_card__info__title">{{ amenitie.title }}</h2>
       <p class="amenitie_card__info__description">{{ amenitie.description }}</p>
       <div class="amenitie_card__info__action">
-        <a href="#">
+        <a @click="explore">
           <p>Explore</p>
         </a>
       </div>
@@ -34,6 +34,10 @@ export default {
   },
 
   methods: {
+    explore() {
+
+    },
+
     scrollReveal() {
       let options = {
         distance: "50px",
@@ -65,33 +69,34 @@ export default {
   gap: 10px;
   margin-bottom: 20px;
   margin: 10px;
-  border-left: 2px solid #14274a;
+  border-left: 2px solid $blueZodiac;
   .amenitie_card__info {
     flex: 1;
     padding: 20px 20px;
     .amenitie_card__info__title {
-      font-family: "Cormorant Garamond", sans-serif;
+      font-family: $garamond;
       font-weight: 700;
-      color: #14274a;
+      color: $blueZodiac;
       font-size: 42px;
     }
     .amenitie_card__info__description {
-      font-family: "Montserrat", sans-serif;
+      font-family: $montserrat;
       font-weight: 500;
-      color: #14274a;
+      color: $blueZodiac;
       font-size: 18px;
       padding: 20px 0;
       line-height: 25px;
     }
     .amenitie_card__info__action {
-      font-family: "Montserrat", sans-serif;
-      background: #e0b973;
+      font-family: $montserrat;
+      background: $harvestGold;
       padding: 10px 30px;
       width: 100px;
       text-align: center;
       border-radius: 10px;
+      cursor: pointer;
       p {
-        color: #ffffff;
+        color: $white;
         text-transform: uppercase;
         font-weight: 700;
       }

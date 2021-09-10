@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss">
 .rooms_card {
-  border: 1px solid #14274a;
+  border: 1px solid $blueZodiac;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
@@ -58,12 +58,12 @@ export default {
   .rooms_card__title {
     display: flex;
     flex-direction: row;
-    background: #14274a;
+    background: $blueZodiac;
     justify-content: center;
     align-items: center;
     h2 {
-      color: #ffffff;
-      font-family: "Montserrat", sans-serif;
+      color: $white;
+      font-family: $montserrat;
       font-weight: 700;
       font-size: 32px;
       text-transform: uppercase;
@@ -82,9 +82,9 @@ export default {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
       .rooms_card__options__details_icon {
-        background: #e0b973;
+        background: $harvestGold;
         padding: 10px;
         border-radius: 50%;
         display: flex;
@@ -96,23 +96,23 @@ export default {
         }
       }
       .rooms_card__options__details_text {
-        color: #14274a;
+        color: $blueZodiac;
         font-size: 18px;
         text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
+        font-family: $montserrat;
         font-weight: 700;
       }
     }
     .rooms_card__options__price {
-      background: #e0b973;
+      background: $harvestGold;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 10px 20px;
       border-radius: 5px;
       p {
-        color: #ffffff;
-        font-family: "Montserrat", sans-serif;
+        color: $white;
+        font-family: $montserrat;
         font-weight: 700;
         font-size: 16px;
         text-align: center;

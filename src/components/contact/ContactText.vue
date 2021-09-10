@@ -41,16 +41,16 @@ export default {
   flex-direction: column;
   gap: 10px;
   .contact_text__title {
-    font-family: "Cormorant Garamond", sans-serif;
+    font-family: $garamond;
     font-weight: 700;
     font-size: 32px;
-    color: #14274a;
+    color: $blueZodiac;
     text-transform: uppercase;
   }
   .contact_text__description {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    color: #14274a;
+    color: $blueZodiac;
   }
 }
 

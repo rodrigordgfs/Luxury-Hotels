@@ -31,14 +31,14 @@ export default {
 .contact__header {
   width: 100%;
   height: 300px;
-  background: #14274a;
+  background: $blueZodiac;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   .contact__header_text {
-    color: #ffffff;
-    font-family: "Montserrat", sans-serif;
+    color: $white;
+    font-family: $montserrat;
     font-weight: 700;
     font-size: 48px;
     text-transform: uppercase;
