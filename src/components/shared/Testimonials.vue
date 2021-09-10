@@ -9,30 +9,26 @@
         <p>{{ testimonial.author }}</p>
       </figcaption>
     </figure>
-    <div class="testimonials__buttons">
-      <span
-        :class="disableFirst ? 'button_disabled' : null"
-        class="testimonials__button__previous"
-        @click="previousTestimonials"
-      >
-        <img src="../../assets/icons/previous.svg" alt="Previous" />
-      </span>
-      <span
-        :class="disableLast ? 'button_disabled' : null"
-        class="testimonials__button__next"
-        @click="nextTestimonials"
-      >
-        <img src="../../assets/icons/next.svg" alt="Next" />
-      </span>
-    </div>
+    <button-navigator
+      class="testimonials__buttons"
+      :disable-previous="disablePrevious"
+      :disable-next="disableNext"
+      :previous="previousTestimonials"
+      :next="nextTestimonials"
+    />
   </section>
 </template>
 
 <script>
 import ScrollReveal from "scrollreveal";
+import ButtonNavigator from "@/components/shared/ButtonNavigator";
 
 export default {
   name: "Testimonials",
+
+  components: {
+    ButtonNavigator,
+  },
 
   data() {
     return {
@@ -61,11 +57,11 @@ export default {
   },
 
   computed: {
-    disableFirst() {
+    disablePrevious() {
       return this.testimonials.indexOf(this.testimonial) === 0;
     },
 
-    disableLast() {
+    disableNext() {
       return (
         this.testimonials.indexOf(this.testimonial) ===
         this.testimonials.length - 1
@@ -153,27 +149,5 @@ export default {
       text-align: center;
     }
   }
-  .testimonials__buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    .testimonials__button__previous,
-    .testimonials__button__next {
-      background: $harvestGold;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
-
-.button_disabled {
-  background: $brandy !important;
-  cursor: not-allowed !important;
 }
 </style>

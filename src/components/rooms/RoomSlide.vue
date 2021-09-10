@@ -11,28 +11,25 @@
         backgroundImage: 'url(' + image + ')',
       }"
     />
-    <div class="room_slide__buttons">
-      <span
-        :class="disableFirst ? 'button_disabled' : null"
-        class="room_slide__buttons__previous"
-        @click="previousTestimonials"
-      >
-        <img src="../../assets/icons/previous.svg" alt="Previous" />
-      </span>
-      <span
-        :class="disableLast ? 'button_disabled' : null"
-        class="room_slide__buttons__next"
-        @click="nextTestimonials"
-      >
-        <img src="../../assets/icons/next.svg" alt="Next" />
-      </span>
-    </div>
+    <button-navigator
+      class="room_slide__buttons"
+      :disable-previous="disablePrevious"
+      :disable-next="disableNext"
+      :previous="previousSlide"
+      :next="nextSlide"
+    />
   </div>
 </template>
 
 <script>
+import ButtonNavigator from "@/components/shared/ButtonNavigator";
+
 export default {
   name: "RoomSlide",
+
+  components: {
+    ButtonNavigator,
+  },
 
   props: {
     images: {
@@ -56,23 +53,23 @@ export default {
   },
 
   computed: {
-    disableFirst() {
+    disablePrevious() {
       return this.images.indexOf(this.image) === 0;
     },
 
-    disableLast() {
+    disableNext() {
       return this.images.indexOf(this.image) === this.images.length - 1;
     },
   },
 
   methods: {
-    nextTestimonials() {
+    nextSlide() {
       if (this.images.indexOf(this.image) < this.images.length - 1) {
         this.image = this.images[this.images.indexOf(this.image) + 1];
       }
     },
 
-    previousTestimonials() {
+    previousSlide() {
       if (this.images.indexOf(this.image) > 0) {
         this.image = this.images[this.images.indexOf(this.image) - 1];
       }
@@ -98,27 +95,6 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    .room_slide__buttons__previous,
-    .room_slide__buttons__next {
-      background: $harvestGold;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
-}
-
-.button_disabled {
-  background: $brandy !important;
-  cursor: not-allowed !important;
 }
 </style>
